@@ -17,7 +17,7 @@ public class Main {
         int algoritmo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el item del algoritmo a escoger : \n" + "1 NaivStandard\n" + "2 NaivOnArray\n" + "3 NaivKahan\n" + "4 NaivLoopUnrollingTwo\n" + "5 NaivLoopUnrollingThree\n" + "6 NaivLoopUnrollingFour\n" + "7 WinogradOriginal\n" + "8 WinogradScaled"));
 
         //iteraciones por las diferentes matrices nxn
-        for(int caso = 1; caso <= 8; caso++){
+        for(int caso = 1; caso <= 6; caso++){
             matrices(caso);
             algorithm(algoritmo);
         }
