@@ -11,14 +11,11 @@ public class Main {
     static int[][] Matriz1;
     static int[][] Matriz2;
 
-
     public static void main(String[] args) {
         //menu para eleccion del algoritmo
-//        int algoritmo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el item del algoritmo a escoger : \n" + "1 NaivStandard\n" + "2 NaivOnArray\n" + "3 NaivKahan\n" + "4 NaivLoopUnrollingTwo\n" + "5 NaivLoopUnrollingThree\n" + "6 NaivLoopUnrollingFour\n" + "7 WinogradOriginal\n" + "8 WinogradScaled"));
-        int algoritmo;
+        int algoritmo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el item del algoritmo a escoger : \n" + "1 NaivStandard\n" + "2 NaivOnArray\n" + "3 NaivKahan\n" + "4 NaivLoopUnrollingTwo\n" + "5 NaivLoopUnrollingThree\n" + "6 NaivLoopUnrollingFour\n" + "7 WinogradOriginal\n" + "8 WinogradScaled"));
 
-        //iteraciones por las diferentes matrices nxn
-        for(algoritmo = 1; algoritmo <=8; algoritmo++) {
+            //iteraciones por las diferentes matrices nxn
             for (int caso = 1; caso <= 12; caso++) {
                 matrices(caso);
                 algorithm(algoritmo);
@@ -29,7 +26,6 @@ public class Main {
                 throw new RuntimeException(e);
             }
             TiempoEjecucion.matricesTiempoAlgoritmos.clear();
-        }
     }
 
     public static void matrices(int caso){
