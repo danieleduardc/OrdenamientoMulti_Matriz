@@ -10,7 +10,7 @@ public class ExportarTiempos {
     static List<String> algoritmo = new ArrayList<>(Arrays.asList("NaivStandard", "NaivOnArray", "NaivKahan", "NaivLoopUnrollingTwo", "NaivLoopUnrollingThree", "NaivLoopUnrollingFour", "WinogradOriginal", "WinogradScaled"));
 
     public static void exportarTiempos(List<Long> lista, int item) throws IOException {
-        String rutaArchivo = "src/TimeResult/" +algoritmo.get(item)+ ".txt"; // Especifica la ruta del archivo con el nombre proporcionado
+        String rutaArchivo = "src/TimeResult/" +algoritmo.get(item-1)+ ".txt"; // Especifica la ruta del archivo con el nombre proporcionado
         FileWriter escritor = new FileWriter(rutaArchivo);
         BufferedWriter bufferEscritor = new BufferedWriter(escritor);
 

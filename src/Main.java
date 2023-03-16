@@ -14,20 +14,22 @@ public class Main {
 
     public static void main(String[] args) {
         //menu para eleccion del algoritmo
-        int algoritmo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el item del algoritmo a escoger : \n" + "1 NaivStandard\n" + "2 NaivOnArray\n" + "3 NaivKahan\n" + "4 NaivLoopUnrollingTwo\n" + "5 NaivLoopUnrollingThree\n" + "6 NaivLoopUnrollingFour\n" + "7 WinogradOriginal\n" + "8 WinogradScaled"));
+//        int algoritmo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el item del algoritmo a escoger : \n" + "1 NaivStandard\n" + "2 NaivOnArray\n" + "3 NaivKahan\n" + "4 NaivLoopUnrollingTwo\n" + "5 NaivLoopUnrollingThree\n" + "6 NaivLoopUnrollingFour\n" + "7 WinogradOriginal\n" + "8 WinogradScaled"));
+        int algoritmo;
 
         //iteraciones por las diferentes matrices nxn
-        for(int caso = 1; caso <= 6; caso++){
-            matrices(caso);
-            algorithm(algoritmo);
+        for(algoritmo = 1; algoritmo <=8; algoritmo++) {
+            for (int caso = 1; caso <= 12; caso++) {
+                matrices(caso);
+                algorithm(algoritmo);
+            }
+            try {
+                ExportarTiempos.exportarTiempos(TiempoEjecucion.matricesTiempoAlgoritmos, algoritmo);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            TiempoEjecucion.matricesTiempoAlgoritmos.clear();
         }
-        try {
-            ExportarTiempos.exportarTiempos(TiempoEjecucion.matricesTiempoAlgoritmos,algoritmo);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        TiempoEjecucion.matricesTiempoAlgoritmos.clear();
-
     }
 
     public static void matrices(int caso){
