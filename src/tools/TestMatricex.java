@@ -16,5 +16,6 @@ public class TestMatricex {
         ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz512x512,9);
         ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz1024x1024,10);
         ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz2048x2048,11);
+        ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz4096x4096,12);
     }
 }
