@@ -1,6 +1,6 @@
 package tools;
 
-public class Matriz {
+public class Imprimir {
 
     public static void imprimirMatriz(int[][] matriz) {
         int n = matriz.length;

@@ -1,6 +1,6 @@
-import tools.Matriz;
+import tools.Imprimir;
 
-public class NaivStandard extends Matriz {
+public class NaivStandard extends Imprimir {
 
     public static void naivStandard(int[][] a, int[][] b) {
         int n = a.length;
@@ -16,6 +16,6 @@ public class NaivStandard extends Matriz {
                 result[i][j] = aux;
             }
         }
-        imprimirMatriz(result);
+//        imprimirMatriz(result);
     }
 }

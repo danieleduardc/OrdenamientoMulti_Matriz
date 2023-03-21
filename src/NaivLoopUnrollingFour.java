@@ -1,6 +1,6 @@
-import tools.Matriz;
+import tools.Imprimir;
 
-public class NaivLoopUnrollingFour extends Matriz {
+public class NaivLoopUnrollingFour extends Imprimir {
 
     public static void naivLoopUnrollingFour(int[][] A, int[][] B) {
         int N = A.length;
@@ -59,6 +59,6 @@ public class NaivLoopUnrollingFour extends Matriz {
                 }
             }
         }
-        imprimirMatriz(Result);
+//        imprimirMatriz(Result);
     }
 }

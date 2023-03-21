@@ -1,6 +1,6 @@
-import tools.Matriz;
+import tools.Imprimir;
 
-public class NaivKahan extends Matriz {
+public class NaivKahan extends Imprimir {
 
     public static void naiveKahan(int[][] a, int[][] b) {
         int n = a.length;
@@ -18,7 +18,7 @@ public class NaivKahan extends Matriz {
                 result[i][j] = sum;
             }
         }
-        imprimirMatriz(result);
+//        imprimirMatriz(result);
     }
 
 }

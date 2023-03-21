@@ -1,6 +1,6 @@
-import tools.Matriz;
+import tools.Imprimir;
 
-public class NaivLoopUnrollingTwo extends Matriz {
+public class NaivLoopUnrollingTwo extends Imprimir {
 
     public static void naiveLoopUnrollingTwo(int[][] a, int[][] b) {
         int n = a.length;
@@ -16,6 +16,6 @@ public class NaivLoopUnrollingTwo extends Matriz {
                 result[i][j + 1] = sum2;
             }
         }
-        imprimirMatriz(result);
+//        imprimirMatriz(result);
     }
 }

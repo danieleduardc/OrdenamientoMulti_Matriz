@@ -1,6 +1,6 @@
-import tools.Matriz;
+import tools.Imprimir;
 
-public class WinogradOriginal extends Matriz {
+public class WinogradOriginal extends Imprimir {
 
     public static void winogradOriginal(int[][] A, int[][] B) {
         int N = A.length;
@@ -55,6 +55,6 @@ public class WinogradOriginal extends Matriz {
                 }
             }
         }
-        imprimirMatriz(Result);
+//        imprimirMatriz(Result);
     }
 }

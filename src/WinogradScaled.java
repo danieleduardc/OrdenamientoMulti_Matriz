@@ -1,6 +1,6 @@
-import tools.Matriz;
+import tools.Imprimir;
 
-public class WinogradScaled extends Matriz {
+public class WinogradScaled extends Imprimir {
 
     public static void winogradScaled(int[][] A, int[][] B) {
         int m = A.length;
@@ -62,7 +62,7 @@ public class WinogradScaled extends Matriz {
             }
         }
 
-        imprimirMatriz(result);
+//        imprimirMatriz(result);
     }
 
 }

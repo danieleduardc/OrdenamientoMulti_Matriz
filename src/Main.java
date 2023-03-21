@@ -14,9 +14,9 @@ public class Main {
 
     public static void main(String[] args) {
         // eleccion del algoritmo
-        for(int algoritmo = 9; algoritmo <= 10; algoritmo++) {
+        for(int algoritmo = 1; algoritmo <= 10; algoritmo++) {
             //iteraciones por las diferentes matrices nxn
-            for (int caso = 1; caso <= 3; caso++) {
+            for (int caso = 1; caso <= 12; caso++) {
                 matrices(caso);
                 algorithm(algoritmo);
             }
