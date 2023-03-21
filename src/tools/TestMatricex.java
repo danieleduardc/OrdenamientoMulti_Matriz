@@ -1,27 +1,20 @@
 package tools;
 
+import java.io.IOException;
+
 public class TestMatricex {
 
-    public static void main(String[] args) {
-        int[][] firstMatrix = {{1520, 7532}, {2407, 3518}};
-        int[][] secondMatrix = {{6174, 5172}, {2559, 1798}};
-
-        int[][] result = new int[2][2];
-
-        for (int i = 0; i < firstMatrix.length; i++) {
-            for (int j = 0; j < secondMatrix[0].length; j++) {
-                for (int k = 0; k < firstMatrix[0].length; k++) {
-                    result[i][j] += firstMatrix[i][k] * secondMatrix[k][j];
-                }
-            }
-        }
-
-        System.out.println("Result:");
-        for (int i = 0; i < result.length; i++) {
-            for (int j = 0; j < result[0].length; j++) {
-                System.out.print(result[i][j] + " ");
-            }
-            System.out.println();
-        }
+    public static void ExportAllMatrix() throws IOException {
+        ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz2x2,1);
+        ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz4x4,2);
+        ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz8x8,3);
+        ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz16x16,4);
+        ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz32x32,5);
+        ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz64x64,6);
+        ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz128x128,7);
+        ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz256x256,8);
+        ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz512x512,9);
+        ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz1024x1024,10);
+        ExportarTiempos.exportarTiemposMatriz(TiempoEjecucion.matriz2048x2048,11);
     }
 }

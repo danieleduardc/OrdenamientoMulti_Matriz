@@ -1,5 +1,6 @@
 import tools.ExportarTiempos;
 import tools.LeerArchivoTxt;
+import tools.TestMatricex;
 import tools.TiempoEjecucion;
 
 import javax.swing.*;
@@ -12,20 +13,27 @@ public class Main {
     static int[][] Matriz2;
 
     public static void main(String[] args) {
-        //menu para eleccion del algoritmo
-        int algoritmo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el item del algoritmo a escoger : \n" + "1 NaivStandard\n" + "2 NaivOnArray\n" + "3 NaivKahan\n" + "4 NaivLoopUnrollingTwo\n" + "5 NaivLoopUnrollingThree\n" + "6 NaivLoopUnrollingFour\n" + "7 WinogradOriginal\n" + "8 WinogradScaled"));
-
+        // eleccion del algoritmo
+        for(int algoritmo = 9; algoritmo <= 10; algoritmo++) {
             //iteraciones por las diferentes matrices nxn
-            for (int caso = 1; caso <= 12; caso++) {
+            for (int caso = 1; caso <= 3; caso++) {
                 matrices(caso);
                 algorithm(algoritmo);
             }
+            System.out.println("Termino algoritmo: " + algoritmo);
             try {
                 ExportarTiempos.exportarTiempos(TiempoEjecucion.matricesTiempoAlgoritmos, algoritmo);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+            TiempoEjecucion.ResulTimeMatrix(TiempoEjecucion.matricesTiempoAlgoritmos.size());
             TiempoEjecucion.matricesTiempoAlgoritmos.clear();
+        }
+        try {
+            TestMatricex.ExportAllMatrix();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void matrices(int caso){
@@ -147,6 +155,20 @@ public class Main {
             case 8:{
                 inicio = System.nanoTime();
                 WinogradScaled.winogradScaled(Matriz1, Matriz2);
+                fin = System.nanoTime();
+                TiempoEjecucion.timeAlgortithm(inicio,fin);
+                break;
+            }
+            case 9:{
+                inicio = System.nanoTime();
+                StrassenNaiv.multiply(Matriz1, Matriz2);
+                fin = System.nanoTime();
+                TiempoEjecucion.timeAlgortithm(inicio,fin);
+                break;
+            }
+            case 10:{
+                inicio = System.nanoTime();
+                StrassenWinograd.strassenWinograd(Matriz1, Matriz2);
                 fin = System.nanoTime();
                 TiempoEjecucion.timeAlgortithm(inicio,fin);
                 break;
