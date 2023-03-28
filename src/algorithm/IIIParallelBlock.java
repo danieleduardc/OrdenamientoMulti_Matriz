@@ -1,3 +1,5 @@
+package algorithm;
+
 public class IIIParallelBlock {
     public static void parallelBlock(int[][] B, int[][] C) {
         int size = B.length;

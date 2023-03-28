@@ -1,3 +1,5 @@
+package algorithm;
+
 public class StrassenNaiv {
     public static int[][] multiply(int[][] A, int[][] B) {
         int n = A.length;

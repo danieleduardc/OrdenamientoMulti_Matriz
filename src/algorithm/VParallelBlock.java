@@ -1,3 +1,5 @@
+package algorithm;
+
 public class VParallelBlock {
     public static void parallelBlock(int[][] A, int[][] B) {
         int size = A.length;

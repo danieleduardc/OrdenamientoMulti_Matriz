@@ -1,3 +1,5 @@
+package algorithm;
+
 public class StrassenWinograd {
 
     public static int[][] strassenWinograd(int[][] A, int[][] B) {
