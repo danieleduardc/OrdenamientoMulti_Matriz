@@ -15,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
         // eleccion del algoritmo
-        for(int algoritmo = 1; algoritmo <= 16; algoritmo++) {
+        for(int algoritmo = 1; algoritmo <= 12; algoritmo++) {
             //iteraciones por las diferentes matrices nxn
             for (int caso = 1; caso <= 12; caso++) {
                 matrices(caso);
@@ -119,34 +119,6 @@ public class Main {
             case 12:{
                 inicio = System.nanoTime();
                 IIIParallelBlock.parallelBlock(Matriz1, Matriz2);
-                fin = System.nanoTime();
-                TiempoEjecucion.timeAlgortithm(inicio,fin);
-                break;
-            }
-            case 13:{
-                inicio = System.nanoTime();
-                IVSequentialBlock.SequentialBlock(Matriz1,Matriz2);
-                fin = System.nanoTime();
-                TiempoEjecucion.timeAlgortithm(inicio,fin);
-                break;
-            }
-            case 14: {
-                inicio = System.nanoTime();
-                IVParallelBlock.parallelBlock(Matriz1, Matriz2);
-                fin = System.nanoTime();
-                TiempoEjecucion.timeAlgortithm(inicio,fin);
-                break;
-            }
-            case 15:{
-                inicio = System.nanoTime();
-                VSequentialBlock.sequentialBlock(Matriz1,Matriz2);
-                fin = System.nanoTime();
-                TiempoEjecucion.timeAlgortithm(inicio,fin);
-                break;
-            }
-            case 16:{
-                inicio = System.nanoTime();
-                VParallelBlock.parallelBlock(Matriz1, Matriz2);
                 fin = System.nanoTime();
                 TiempoEjecucion.timeAlgortithm(inicio,fin);
                 break;

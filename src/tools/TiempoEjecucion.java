@@ -5,6 +5,7 @@ import java.util.List;
 
 public class TiempoEjecucion {
     public static List<Long> matricesTiempoAlgoritmos = new ArrayList<>();
+
     public static List<Long> matriz2x2 = new ArrayList<>();
     public static List<Long> matriz4x4 = new ArrayList<>();
     public static List<Long> matriz8x8 = new ArrayList<>();
