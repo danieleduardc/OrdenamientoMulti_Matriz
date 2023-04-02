@@ -21,7 +21,7 @@ public class Main {
                 matrices(caso);
                 algorithm(algoritmo);
             }
-            System.out.println("Termino algoritmo: " + algoritmo);
+            System.out.println("Termino algoritmo: " + algoritmo+ "\n");
             try {
                 ExportarTiempos.exportarTiempos(TiempoEjecucion.matricesTiempoAlgoritmos, algoritmo);
             } catch (IOException e) {

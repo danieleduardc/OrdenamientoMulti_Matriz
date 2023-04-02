@@ -22,7 +22,7 @@ public class TiempoEjecucion {
     public static void timeAlgortithm(long inicio, long fin){
         long time = (fin - inicio);
         matricesTiempoAlgoritmos.add(time);
-        System.out.println(" Time: " +time+ "\n");
+        System.out.println(" Time: "+time+"ns");
     }
 
     public static void ResulTimeMatrix(int parametro){
